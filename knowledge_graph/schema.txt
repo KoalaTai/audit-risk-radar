@@ -1,5 +1,17 @@
 graph LR
     A[Regulation] -- regulates --> E[Medical Device]
-    C[Standard] -- appliesTo --> E 
-    G[Guidance Document] -- clarifies --> A
-    G |-- clarifies --> C
+    C[Standard] -- appliesTo --> E
+    G[Guidance Document] == clarifies ==> A
+    G -- clarifies --> C
+    F[Manufacturer)] -- manufactures --> E
+    H[Pharmaceutical Product] == treats ==> I((Disease/Condition)
+    J[SaMD] -- usedFor --> K.(Medical Purpose)
+    L[Algorithm] == developedFor ==> J
+    M[Data] -- collectedDuring --> N[Clinical Trial]
+    M == usedFor
+    OP(Analysis/Modeling)
+    A -- govens --> N
+    P[Validation Process] -- validates --> K
+    P validates ==> L
+    E -- hasAdverseEvent --> Q[Adverse Event]
+    H -- hasAdverseEvent --> Q
