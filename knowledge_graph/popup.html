@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<mhead lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Audit Risk Predicto</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Audit Risk Predictor</h1>
+        
+        <div class="input-section">
+            <label for="auditType">Select Audit Type:</label>
+            <select id="auditType">
+                <option value="">-- Select --</option>
+                <option value="FDA">FDA</option>
+                <option value="ISO13485">ISO 13485</option>
+                <option value="NotifiedBody">Notified Body</option>
+            </select>
+
+            <label for="documentText">Enter Document Text:</label>
+            <textarea id="documentText" rows="6" placeholder="Paste your document text here..."></textarea>
+
+            <button id="analyzeBtn">Analyze</button>
+        </div>
+
+        <div id="results" class="results-section">
+            <h2>Analysis Results</h2>
+            <div id="risksContainer"></div>
+            <div id="recommendationsContainer"></div>
+        </div>
+
+        <div class="search-section">
+            <h2>Additional Information</h2>
+            <input type="text" id="searchQuery" placeholder="Search for more information...">
+            <button id="searchBtn">Search</button>
+            <div id="searchResults"></div>
+
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
