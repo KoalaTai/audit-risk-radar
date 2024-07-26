@@ -1,0 +1,5 @@
+graph LR
+    A[Regulation] -- regulates --> E[Medical Device]
+    C[Standard] -- appliesTo --> E 
+    G[Guidance Document] -- clarifies --> A
+    G |-- clarifies --> C
